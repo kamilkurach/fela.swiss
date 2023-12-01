@@ -6,7 +6,8 @@ app = Flask(__name__)
 
 # params
 command = None
-IP = None
+ip = 'http://127.0.0.1:5000/'
+chrome_path = '/usr/bin/chromium-browser'
 
 @app.route("/")
 def fela_screen():
@@ -17,8 +18,8 @@ def update_params():
     pass
 
 def open_browser():
-    webbrowser.open('http://127.0.0.1:5000/')
-
+    webbrowser.get(chrome_path).open(ip)
+    
 def main():
     Timer(1, open_browser).start()
     app.run(port=5000)
