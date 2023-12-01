@@ -6,21 +6,22 @@
 </head>
 
 <body class="body">
+    <div class="container">
+        <div class="screen">
+            <img src="/home/vboxuser/Dokumenty/dev/fela/static/Flag_of_Diessenhofen.jpg" class="flag"
+                alt="Flag_of_Diessenhofen" width="150" height="150">
 
-    <div class="screen">
-        <img src="/home/vboxuser/Dokumenty/dev/fela/static/Flag_of_Diessenhofen.jpg" class="flag"
-            alt="Flag_of_Diessenhofen" width="150" height="150">
+            <img src="/home/vboxuser/Dokumenty/dev/fela/static/Swiss_Station_Clock.svg" class="clock"
+                alt="Flag_of_Diessenhofen" width="150" height="150">
 
-        <img src="/home/vboxuser/Dokumenty/dev/fela/static/Swiss_Station_Clock.svg" class="clock"
-            alt="Flag_of_Diessenhofen" width="150" height="150">
-
-        <img src="/home/vboxuser/Dokumenty/dev/fela/static/Flag_of_Canton_of_Thurgau.png" class="canton_flag"
-            alt="Flag_of_Diessenhofen" width="780" height="780">
+            <img src="/home/vboxuser/Dokumenty/dev/fela/static/Flag_of_Canton_of_Thurgau.png" class="canton_flag"
+                alt="Flag_of_Diessenhofen" width="780" height="780">
+        </div>
+        <div class="button">
+            <button class="print">DRUCKEN</button>
+        </div>
     </div>
-    <div class="buttons">
-        <button class="print">DRUCKEN</button>
-    </div>
-    
+
 </body>
 
 <style>
@@ -31,7 +32,14 @@
         background-color: rgb(236, 166, 73);
     }
 
+    .container {
+        width: 768px;
+        height: 1024px;
+        position: relative;
+    }
+
     .screen {
+        position: absolute;
         width: 768px;
         height: 1024px;
         align-items: center;
@@ -41,6 +49,8 @@
         /* bc2 */
         background-color: rgb(6, 50, 121);
     }
+
+    .button {}
 
     .flag {
         margin-left: 90px;
@@ -64,19 +74,18 @@
         width: 200px;
         border-radius: 20px;
         border-color: rgb(245, 245, 198);
-        margin-top: 100px;
+        margin-top: 550px;
         background-color: rgb(248, 157, 37);
-        margin-left: -470px;
+        margin-left: 284px;
         font-style: oblique;
         font-size: 30px;
         opacity: 0.8;
-    } 
+    }
 
     .print:active {
         transform: translateZ(20px);
         background-color: rgb(208, 250, 221);
     }
-
 </style>
 
 </html>
