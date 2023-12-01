@@ -4,7 +4,7 @@ from threading import Timer
 
 app = Flask(__name__)
 
-# parama
+# params
 command = None
 IP = None
 
