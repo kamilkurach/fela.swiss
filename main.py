@@ -6,7 +6,7 @@ import subprocess
 app = Flask(__name__)
 
 # params
-command = None
+command = ["pwd"]
 ip = 'http://127.0.0.1:5000/'
 chrome_path = '/usr/bin/chromium-browser'
 
@@ -30,7 +30,7 @@ def test_print():
         
 def subprocess_command():
     print("*** Message: run subprocess command ***")
-    spo = subprocess.run(["pwd"], capture_output=True)  
+    spo = subprocess.run(command, capture_output=True)  
     print(spo.stdout)
 
 def open_browser():
