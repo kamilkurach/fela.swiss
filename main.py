@@ -25,7 +25,7 @@ def test_print():
             Timer(1, subprocess_command).start()
             return render_template("index.html")
         except Exception as e:
-            print("*** Message: subprocess error ***")
+            print("*** Message: subprocess error. Redirecting.. ***")
             return redirect("/")
         
 def subprocess_command():
