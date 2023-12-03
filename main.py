@@ -6,7 +6,6 @@ app = Flask(__name__)
 
 # params
 command = ["pwd"]
-ip = 'http://127.0.0.1:5000/'
 
 @app.route("/")
 def fela_screen():
@@ -15,10 +14,6 @@ def fela_screen():
 @app.route("/info", methods=['POST'])
 def info_screen():
     return redirect("/")
-
-@app.route("/update")
-def update_params():
-    pass
 
 @app.route("/print", methods=['POST'])
 def test_print():
