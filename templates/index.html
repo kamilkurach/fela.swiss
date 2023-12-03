@@ -22,8 +22,10 @@
         <form action="/print" method="post">
             <div class="button">
                 <!-- <input type="submit" value="DRUCKEN" class="print"></input> -->
+                <div class="train-railway-track-ticket"></div>
                 <img src="/home/vboxuser/Dokumenty/dev/fela/static/fela_train_bg_color_ticket.png" class="train-ticket"
                     alt="Fela_train_ticket" width="350" height="350">
+                <div class="train-railway-track-info"></div>
                 <img src="/home/vboxuser/Dokumenty/dev/fela/static/fela_train_bg_color_info.png" class="train-info"
                     alt="Fela_train_info" width="350" height="350">
             </div>
@@ -83,6 +85,15 @@
         border-color: black;
     }
 
+    .train-railway-track-ticket {
+        position: absolute;
+        margin-top: 740px;
+        opacity: 1;
+        width: 280px;
+        height: 8px;
+        background: rgb(236, 166, 73);
+    }
+
     .train-ticket {
         animation: changeX-anim-ticket 5s linear infinite;
         position: absolute;
@@ -111,6 +122,17 @@
         margin-top: 150px;
         margin-left: 425px;
         opacity: 0.9;
+    }
+
+
+    .train-railway-track-info {
+        position: absolute;
+        margin-top: 490px;
+        margin-left: 500px;
+        opacity: 1;
+        width: 280px;
+        height: 8px;
+        background: rgb(236, 166, 73);
     }
 
     @keyframes changeX-anim-info {
