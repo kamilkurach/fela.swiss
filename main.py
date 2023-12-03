@@ -14,6 +14,10 @@ chrome_path = '/usr/bin/chromium-browser'
 def fela_screen():
     return render_template("index.html")
 
+@app.route("/info", methods=['POST'])
+def info_screen():
+    return redirect("/")
+
 @app.route("/update")
 def update_params():
     pass
