@@ -1,4 +1,3 @@
-import webbrowser
 from flask import Flask, render_template, request, redirect
 from threading import Timer
 import subprocess
@@ -38,7 +37,12 @@ def subprocess_command():
     print(spo.stdout)
 
 def open_browser():
-    webbrowser.get(chrome_path).open(ip)
+    # set default page to http://127.0.0.1:5000/
+    # exit kiosk alt+F4
+    try:
+        subprocess.run(["chromium-browser", "--kiosk"]) 
+    except Exception as e:
+        print(e) 
 
 def main():
     Timer(1, open_browser).start()
