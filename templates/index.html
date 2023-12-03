@@ -21,7 +21,11 @@
         </div>
         <form action="/print" method="post">
             <div class="button">
-                <input type="submit" value="DRUCKEN" class="print"></input>
+                <!-- <input type="submit" value="DRUCKEN" class="print"></input> -->
+                <img src="/home/vboxuser/Dokumenty/dev/fela/static/fela_train_bg_color_ticket.png" class="train-ticket"
+                alt="Fela_train_ticket" width="350" height="350">
+                <img src="/home/vboxuser/Dokumenty/dev/fela/static/fela_train_bg_color_info.png" class="train-info"
+                alt="Fela_train_info" width="350" height="350">
             </div>
         </form>
     </div>
@@ -77,6 +81,50 @@
         margin-top: 30px;
         border-width: 5px;
         border-color: black;
+    }
+
+    .train-ticket {
+        animation: changeX-anim-ticket 5s linear infinite;
+        position: absolute;
+        margin-top: 400px;
+        opacity: 0.9;
+        margin-left: -10px;
+    }
+
+    @keyframes changeX-anim-ticket {
+	0% {
+		transform: translateX(10px);
+	}
+
+	50% {
+		transform: translateX(-10px);
+	}
+
+    100% {
+		transform: translateX(10px);
+	}
+    }
+
+    .train-info {
+        animation: changeX-anim-info 6s linear infinite;
+        position: absolute;
+        margin-top: 150px;
+        margin-left: 425px;
+        opacity: 0.9;
+    }
+
+    @keyframes changeX-anim-info {
+	0% {
+		transform: translateX(10px);
+	}
+
+	50% {
+		transform: translateX(40px);
+	}
+
+    100% {
+		transform: translateX(10px);
+	}
     }
 
     .logo {
