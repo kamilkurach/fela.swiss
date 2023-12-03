@@ -7,7 +7,6 @@ app = Flask(__name__)
 # params
 command = ["pwd"]
 ip = 'http://127.0.0.1:5000/'
-chrome_path = '/usr/bin/chromium-browser'
 
 @app.route("/")
 def fela_screen():
