@@ -39,7 +39,7 @@ def open_browser():
     # set default page to http://127.0.0.1:5000/
     # exit kiosk alt+F4
     try:
-        subprocess.run(["chromium-browser", "--kiosk"]) 
+        subprocess.run(["chromium-browser", "--kiosk", "--app=http://127.0.0.1:5000/"]) 
     except Exception as e:
         print(e) 
 
