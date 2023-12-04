@@ -36,8 +36,11 @@ def test_print():
         
 def subprocess_command():
     print("*** Message: run subprocess command ***")
-    spo = subprocess.run(command, capture_output=True)  
-    print(spo.stdout)
+    try:
+        spo = subprocess.run(command, capture_output=True)  
+        print(spo.stdout)
+    except Exception as e:
+        print(e)
 
 def open_browser():
     # set default page to http://127.0.0.1:5000/
