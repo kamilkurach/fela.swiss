@@ -8,8 +8,11 @@ app = Flask(__name__)
 # params
 command = []
 try:
-    for i in range(1, len(sys.argv)):
-        command.append(sys.argv[i])
+    if len(sys.argv) > 1:
+        for i in range(1, len(sys.argv)):
+            command.append(sys.argv[i])
+    else:
+        command = ["pwd"]
 except IndexError:
     command = ["pwd"]
 
