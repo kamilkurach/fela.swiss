@@ -1,11 +1,17 @@
 from flask import Flask, render_template, request, redirect
 from threading import Timer
 import subprocess
+import sys
 
 app = Flask(__name__)
 
 # params
-command = ["pwd"]
+command = []
+try:
+    for i in range(1, len(sys.argv)):
+        command.append(sys.argv[i])
+except IndexError:
+    command = ["pwd"]
 
 @app.route("/")
 def fela_screen():
