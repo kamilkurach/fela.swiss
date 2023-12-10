@@ -24,12 +24,12 @@ def fela_screen():
 def info_screen():
     return redirect("/")
 
-@app.route("/print", methods=['POST'])
-def test_print():
+@app.route("/tickets", methods=['POST'])
+def test_tickets():
     if request.method == 'POST':
         try:
             Timer(1, subprocess_command).start()
-            return render_template("index.html")
+            return render_template("tickets.html")
         except Exception as e:
             print("*** Message: subprocess error. Redirecting.. ***")
             return redirect("/")
