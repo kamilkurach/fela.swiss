@@ -29,7 +29,7 @@ def test_tickets():
     if request.method == 'POST':
         try:
             Timer(1, subprocess_command).start()
-            return render_template("tickets.html")
+            return render_template("index.html")
         except Exception as e:
             print("*** Message: subprocess error. Redirecting.. ***")
             return redirect("/")
