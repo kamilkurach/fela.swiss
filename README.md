@@ -7,3 +7,5 @@ UI demo for Fela ticket vending machine. (unfortunately not picked for presentat
 I do not own the rights to contents of "static" folder. 
 All assets were downloaded from https://www.wikipedia.org/
 and https://www.fela.swiss/ for making demo UI only.
+
+#### TIME: ~28 hours (coding + GIMP) 
