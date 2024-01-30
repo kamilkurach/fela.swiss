@@ -12,7 +12,7 @@
                 alt="Flag_of_Diessenhofen" width="150" height="150">
 
             <img src="/static/Swiss_Station_Clock.svg" class="clock"
-                alt="Swiss_Station_Clock" width="150" height="150">
+                alt="Swiss_Station_Clock" width="150" height="150">    
 
             <img src="/static/FELA-Logo.png" class="logo" alt="FELA-logo" width="160"
                 height="100">
@@ -24,11 +24,16 @@
                 <input type="image" src="/static/fela_train_bg_color_ticket.png" class="train-ticket"
                 alt="Fela_train_ticket"></input>
         </form>
-        <form action="/info" method="post">
+        <form action="/render" method="post">
                 <div class="train-railway-track-info"></div>
-                <input type="image" src="/static/fela_train_bg_color_info.png" class="train-info"
+                <input type="image" src="/static/fela_train_bg_color_render.png" class="train-info"
                 alt="Fela_train_info"></input>
         </form>
+        <form action="/info" method="post">
+            <div class="info_square"></div>
+            <input type="image" src="/static/info.png" class="info_square"
+            alt="button-info"></input>
+    </form>
     </div>
 
 </body>
@@ -110,6 +115,13 @@
         margin-left: -100px;
     }
 
+    .info_square {
+        position: absolute;
+        margin-top: 880px;
+        margin-left:  7%;
+        opacity: 1;
+
+    }
     @keyframes changeX-anim-ticket {
         0% {
             transform: translateX(10px);
