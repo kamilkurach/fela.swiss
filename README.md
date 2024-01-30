@@ -1,6 +1,6 @@
 # fela.swiss demo UI
 
-UI demo for Fela ticket vending machine. (in the end, picked for presentation at client's office)
+UI demo for Fela ticket vending machine. ( in the end, picked for sending to client's office )
 
 <img src="resources/20231204_103138.jpg" width="450"> 
 
