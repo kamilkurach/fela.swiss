@@ -5,6 +5,7 @@ import sys
 import re 
 import os
 import socket
+import time
 
 app = Flask(__name__)
 
@@ -41,7 +42,7 @@ def test_tickets():
     if request.method == 'POST':
         try:
             Timer(1, subprocess_command).start()
-            return render_template("index.html")
+            return render_template("anim.html")
         except Exception as e:
             print("*** Message: subprocess error. Redirecting.. ***")
             return redirect("/")
@@ -75,10 +76,14 @@ def subprocess_info_command():
 def subprocess_command():
     print("*** Message: run subprocess command ***")
     try:
-        spo = subprocess.run(command, capture_output=True)  
+        spo = subprocess.run(command, capture_output=True)
         print(spo.stdout)
     except Exception as e:
         print(e)
+
+@app.route("/anim")
+def animation():
+    return render_template("anim.html")
 
 def open_browser():
     # set default page to http://127.0.0.1:5000/

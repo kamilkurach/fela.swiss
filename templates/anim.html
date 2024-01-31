@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Fela TVM - animation</title>
+</head>
+<body class="body">
+    <div class="container">
+        <div class="screen">
+            <div class="anim-screen">
+                <img src="/static/fela_train_bg_color_small.png"  class="train" alt="train-carriage">
+                <img src="/static/pole.png" class="pole" alt="pole" height="160">
+                <div class="railway"></div>
+                <div class="field"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    setTimeout(function(){ window.location = "/"; },15000);
+</script>
+
+<style>
+    .container {
+        width: 768px;
+        height: 1024px;
+        top: 0;
+        position: fixed;
+    }
+
+    .body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(236, 166, 73);
+    }
+
+    .body::-webkit-scrollbar {
+        display: none;
+    }
+
+    .screen {
+        position: absolute;
+        width: 768px;
+        height: 1024px;
+        align-items: center;
+        justify-content: center;
+        /* bc 1 Rolex green*/
+        background-color: rgb(34, 75, 61);
+        /* bc2 AVA train dark blue*/
+        /* background-color: rgb(4, 39, 97); */
+    }
+
+    .anim-screen {
+        position: fixed;
+        background: linear-gradient(to bottom, rgb(161, 250, 220), rgb(75, 197, 157));
+        width: 768px;
+        height: 500px;
+        margin-top: 200px;
+    }
+
+    .field {
+        position: fixed;
+        margin-top: 0px;
+        background-color: rgb(11, 44, 33);
+        width: 768px;
+        height: 70px;
+    }
+
+    .railway {
+        margin-top: 0px;
+        background-color: rgb(5, 5, 5);
+        width: 768px;
+        height: 7px;
+    }
+
+    .train {
+        opacity: 1;
+        margin-top: 0px;
+        margin-left: -10px;
+        animation: 0.7s trainmoveX infinite;
+        animation: 0.4s trainmoveY infinite;
+    }
+
+    .pole {
+        margin-top: 370px;
+        animation: polemove 0.7s;
+        animation-iteration-count: infinite;
+    }
+
+    .m {
+        clip-path: polygon(33% 12%, 64% 31%, 100% 100%, 0% 100%);
+        width: 100px;
+        height:100px;
+    }
+
+    @keyframes polemove {
+        0% {
+            transform: translateX(450px);
+        }
+
+        100% {
+            transform: translateX(-350px);
+        }
+    }
+
+    @keyframes trainmoveX {
+        0% {
+            transform: translateX(5px);
+        }
+
+        50% {
+            transform: translateX(-5px);
+        }
+
+        100% {
+            transform: translateX(5px);
+        }
+    }
+
+    @keyframes trainmoveY {
+        0% {
+            transform: translateY(1px);
+        }
+
+        60% {
+            transform: translateY(-1px);
+        }
+
+        100% {
+            transform: translateY(1px);
+        }
+    }
+
+    body {
+        animation: fadeInAnimation ease 2s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes fadeInAnimation {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+
+</style>
+
+</html>
