@@ -19,12 +19,12 @@ try:
             command.append(sys.argv[i])
     else:
         command = ["gebe-imx/print.sh"]
-        info_command = ["skrypty/render.sh"]
-        ip_command = ["skrypty/ip.sh"] 
+        info_command = ["scripts/render.sh"]
+        ip_command = ["scripts/ip.sh"] 
 except IndexError:
     command = ["gebe-imx/print.sh"]
-    info_command = ["skrypty/render.sh"]
-    ip_command = ["skrypty/ip.sh"]
+    info_command = ["scripts/render.sh"]
+    ip_command = ["scripts/ip.sh"]
 
 @app.route("/")
 def fela_screen():
