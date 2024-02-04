@@ -12,6 +12,7 @@ app = Flask(__name__)
 # params
 command = []
 info_command = []
+ip_command = []
 try:
     if len(sys.argv) > 1:
         for i in range(1, len(sys.argv)):
@@ -19,9 +20,11 @@ try:
     else:
         command = ["/home/root/gebe-imx/print.sh"]
         info_command = ["/home/root/skrypty/render.sh"]
+        ip_command = ["/home/root/skrypty/ip.sh"] 
 except IndexError:
-    info_command = ["/home/root/skrypty/render.sh"]
     command = ["/home/root/gebe-imx/print.sh"]
+    info_command = ["/home/root/skrypty/render.sh"]
+    ip_command = ["/home/root/skrypty/ip.sh"] 
 
 @app.route("/")
 def fela_screen():
@@ -56,7 +59,6 @@ def info():
 
 @app.route("/ip")
 def get_ip():
-    ip_command = ["/home/root/skrypty/ip.sh"] 
     try:
         spo = subprocess.run(ip_command, capture_output=True)
         # print(spo.stdout.decode())
