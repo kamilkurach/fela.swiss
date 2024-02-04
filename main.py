@@ -18,13 +18,13 @@ try:
         for i in range(1, len(sys.argv)):
             command.append(sys.argv[i])
     else:
-        command = ["/home/root/gebe-imx/print.sh"]
-        info_command = ["/home/root/skrypty/render.sh"]
-        ip_command = ["/home/root/skrypty/ip.sh"] 
+        command = ["gebe-imx/print.sh"]
+        info_command = ["skrypty/render.sh"]
+        ip_command = ["skrypty/ip.sh"] 
 except IndexError:
-    command = ["/home/root/gebe-imx/print.sh"]
-    info_command = ["/home/root/skrypty/render.sh"]
-    ip_command = ["/home/root/skrypty/ip.sh"] 
+    command = ["gebe-imx/print.sh"]
+    info_command = ["skrypty/render.sh"]
+    ip_command = ["skrypty/ip.sh"]
 
 @app.route("/")
 def fela_screen():
