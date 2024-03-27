@@ -2,9 +2,6 @@ from flask import Flask, render_template, request, redirect
 from threading import Timer
 import subprocess
 import sys
-import re 
-import os
-import socket
 
 app = Flask(__name__)
 
