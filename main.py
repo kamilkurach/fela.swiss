@@ -58,7 +58,6 @@ def info():
 def get_ip():
     try:
         spo = subprocess.run(ip_command, capture_output=True)
-        # print(spo.stdout.decode())
         return str(spo.stdout.decode())
     except Exception as e:
         print(e)
